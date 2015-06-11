@@ -5,10 +5,15 @@ Crepe.application.routes do
 
   # curl 0.0.0.0:9292/
   # => {"hello":"world"}
-  get do
-    { hello: 'world' }
+  get :health do
+    { status: 'OK' }
   end
 
-  # Mount your other APIs here
-  # mount UsersAPI => :users
+  namespace :v1 do
+    get :health do
+      { status: 'OK' }
+    end
+
+    mount UsersAPI   => :users
+  end
 end
