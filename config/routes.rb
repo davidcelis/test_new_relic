@@ -15,5 +15,6 @@ Crepe.application.routes do
     end
 
     mount UsersAPI   => :users
+    mount WigglesAPI => :wiggles
   end
 end
