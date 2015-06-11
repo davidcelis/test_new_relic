@@ -8,6 +8,9 @@ gem 'rake'
 # Creperie provides CLI convenience for your crepe app as well.
 gem 'creperie', github: 'crepe/creperie'
 
+# Instrument using New Relic.
+gem 'new_relic-crepe', github: 'crepe/new_relic-crepe'
+
 # Use ActiveRecord to define models and PostgreSQL to store them.
 gem 'activerecord', require: 'active_record'
 gem 'pg'
@@ -19,7 +22,7 @@ gem 'pg'
 # gem 'jsonite', github: 'crepe/jsonite'
 
 # Use puma as the web server.
-# gem 'puma'
+gem 'puma'
 
 group :development, :test do
   gem 'pry'
